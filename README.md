@@ -2,6 +2,7 @@
 
 This work is an adaptation of Dinkel et al.'s Data driven GPVAD in TASLP 2021 [Voice activity detection in the wild: A data-driven approach using teacher-student training](https://arxiv.org/abs/2105.04065).
 
+There are additional scripts which help to create the 1-second long frames of input files (make_chunks), analyze the content of h5 file (h5_stats), and to evaluate the model output with given subtitles (sub_stats). 
 
 The following sections are taken from the original work's README.
 
