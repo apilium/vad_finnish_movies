@@ -1,37 +1,9 @@
-# Data driven GPVAD
-Repository for the work in TASLP 2021 [Voice activity detection in the wild: A data-driven approach using teacher-student training](https://arxiv.org/abs/2105.04065).
+# Voice activity detection in old Finnish movies using knowledge distillation
+
+This work is an adaptation of Dinkel et al.'s Data driven GPVAD in TASLP 2021 [Voice activity detection in the wild: A data-driven approach using teacher-student training](https://arxiv.org/abs/2105.04065).
 
 
-![Framework](figs/data_driven_framework.png)
-
-
-## Sample predictions against other methods
-
-![Samples_1](figs/samples_1.png)
-
-![Samples_2](figs/samples_2.png)
-
-![Samples_3](figs/samples_3.png)
-
-![Samples_4](figs/samples_4.png)
-
-## Noise robustness
-
-![Speech](figs/sample_speech.png)
-
-![Background](figs/sample_background.png)
-
-![Speech](figs/sample_speech.png)
-
-## Results
-
-Our best model trained on the SRE (V3) dataset obtains the following results:
-
-|              |   Precision |   Recall |     F1 |   AUC |   FER |   Event-F1 |                                                                                                                 
-|:-------------|------------:|---------:|-------:|------:|------:|-----------:|                                                                                                                 
-| aurora_clean |      96.844 |   95.102 | 95.93  | 98.66 |  3.06 |      74.8  |                                                                                                                 
-| aurora_noisy |      90.435 |   92.871 | 91.544 | 97.63 |  6.68 |      54.45 |                                                                                                                 
-| dcase18      |      89.202 |   88.362 | 88.717 | 95.2  | 10.82 |      57.85 |
+The following sections are taken from the original work's README.
 
 ## Usage
 
@@ -126,34 +98,3 @@ cd ../; #Go to project root
 # Change config accoringly with input data
 python3 run.py train configs/example.yaml
 ```
-
-## Citation
-
-If youre using this work, please cite it in your publications.
-
-```
-@article{Dinkel2021,
-author = {Dinkel, Heinrich and Wang, Shuai and Xu, Xuenan and Wu, Mengyue and Yu, Kai},
-doi = {10.1109/TASLP.2021.3073596},
-issn = {2329-9290},
-journal = {IEEE/ACM Transactions on Audio, Speech, and Language Processing},
-pages = {1542--1555},
-title = {{Voice Activity Detection in the Wild: A Data-Driven Approach Using Teacher-Student Training}},
-url = {https://ieeexplore.ieee.org/document/9405474/},
-volume = {29},
-year = {2021}
-}
-```
-and
-```
-@inproceedings{Dinkel2020,
-  author={Heinrich Dinkel and Yefei Chen and Mengyue Wu and Kai Yu},
-  title={{Voice Activity Detection in the Wild via Weakly Supervised Sound Event Detection}},
-  year=2020,
-  booktitle={Proc. Interspeech 2020},
-  pages={3665--3669},
-  doi={10.21437/Interspeech.2020-0995},
-  url={http://dx.doi.org/10.21437/Interspeech.2020-0995}
-}
-```
-
